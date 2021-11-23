@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+int main() {
+    
+    int uts, uas, i=1,jum;
+    float res;
+    
+    //looping
+   printf("Data Nilai Mahasiswa");
+   printf("\nMasukkan Jumlah Mahasiswa = ");
+   scanf("%d", &jum);
+   for(int x=0;x<jum;x++){
+   printf("Data Mahasiswa ke- %d",jum);
+   printf("\nNilai UTS : ");
+   scanf("%d",&uts);
+   printf("Nilai UAS : ");
+   scanf("%d",&uas);
+   res= (uts * 70/100) + (uas * 30/100);
+   printf("\nNilai anda %.1f\n",res);
+   if(res <= 49)printf("Anda gagal dengan nilai akhir E\n");
+   else if(res >= 50 && res <= 59)printf("Mohon untuk mengulang mata kuliah, nilai akhir D\n");
+   else if(res >= 60 && res <= 69)printf("Anda lulus dengan nilai akhir C\n");
+   else if(res >= 70 && res <= 84)printf("Anda lulus dengan nilai akhir B\n");
+   else if(res>84)printf("Selamat! Anda lulus dengan nilai akhir A\n");
+   }
+  
+return 0;
+}
